@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <!-- Scripts may be placed anywhere on a page. But FYI, they block ,!rendering of elements
+    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
 
-    <!-- SONG DATA -->
     <script src="data/data.js"></script>
 
     <script src="models/SongModel.js"></script>
@@ -18,8 +17,6 @@
     <script src="views/PlayerView.js"></script>
     <script src="views/LibraryView.js"></script>
     <script src="views/LibraryEntryView.js"></script>
-    <script src="views/SongQueueView.js"></script>
-    <script src="views/SongQueueEntryView.js"></script>
     <script src="views/AppView.js"></script>
 
     <script>
@@ -31,14 +28,8 @@
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
 
-
         // put the view onto the screen
         $('body').append(appView.render());
-
-        console.log('library', library)
-        console.log('app', app)
-
-        console.log('library[1]',app.get('library').at(1))
       });
     </script>
   </body>
